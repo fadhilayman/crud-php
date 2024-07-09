@@ -51,6 +51,7 @@ if (isset($_POST['ubah'])){
 }
 
 ?>
+<div class="content-wrapper">
 <div class = "container mt-5">
 <h1>Data Akun </h1>
 
@@ -58,6 +59,7 @@ if (isset($_POST['ubah'])){
 <button type="button" class ="btn btn-primary mb-1" data-bs-toggle="modal" data-bs-target="#modalTambah">Tambah</button>
 
 <?php endif ?>
+
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
@@ -228,7 +230,7 @@ if (isset($_POST['ubah'])){
     </div>
   </div>
 </div>
-
+</div>
 <?php foreach($data_akun  as $akun) : ?>
   <div class="modal fade" id="modalUbah<?= $akun['id_akun'];?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

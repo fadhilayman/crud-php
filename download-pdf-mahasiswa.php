@@ -21,11 +21,11 @@ if(!isset($_SESSION['login'])){
   exit;
  }
  require 'layout/config/app.php';
-require 'vendor/autoload.php';
-
-use Spipu\Html2pdf\Html2pdf;
+ 
 
 $data_barang = select("SELECT * FROM mahasiswa");
+
+$content = '';
 
 $content .= '<style type="text/css">
    .gambar {
@@ -65,7 +65,10 @@ $content .= '<style type="text/css">
     </table>
     </page>';
 
-    $html2pdf = new Html2pdf();
-    $html2pdf->writeHTML($content);
-    ob_start();
-    $html2pdf->output('laporan-siswa.pdf');
+
+
+    echo "$content"
+    ?>
+    <script>
+      window.print()
+    </script>
